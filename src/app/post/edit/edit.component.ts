@@ -11,7 +11,11 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class EditComponent implements OnInit {
   id: number;
-  post: Post;
+  post: Post = {
+    id : 0,
+    title : '',
+    body : ''
+  };
   form: FormGroup;
   constructor(
     public postService: PostService,

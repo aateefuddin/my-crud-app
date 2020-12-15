@@ -8,16 +8,21 @@ import { Post } from '../post';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  
   posts: Post[] = [];
+
   constructor(public postService: PostService) { }
 
   ngOnInit(): void {
+   
     this.postService.getAll().subscribe((data: Post[])=>{
       this.posts = data;
       console.log(this.posts);
+    
     }) 
+    
   }
-  deletePost(id){
+  deletePost(id: number){
     this.postService.delete(id).subscribe(res => {
          this.posts = this.posts.filter(item => item.id !== id);
          console.log('Post deleted successfully!');
