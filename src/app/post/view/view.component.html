@@ -1,21 +1,37 @@
+<div class="create-wrapper">
 <div class="container">
-    <h1>View Post</h1>
-  
-    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
-   
-    <div>
-        <strong>ID:</strong>
-        <p>{{ post?.id }}</p>
+    <div class="heading">
+
+        <h1>View Post</h1>
+      
+        <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
     </div>
    
-    <div>
-        <strong>Title:</strong>
-        <p>{{ post?.title }}</p>
+    <div class="post-section">
+        <div class="post-left">
+
+            <div>
+                <strong>ID:</strong>
+                <p>{{ post?.id }}</p>
+            </div>
+           
+            <div>
+                <strong>Title:</strong>
+                <p>{{ post?.title }}</p>
+            </div>
+           
+            <div>
+                <strong>Body:</strong>
+                <p>{{ post?.body }}</p>
+            </div>
+        </div>
+        <div class="post-right">
+            <div class="img-sec">
+                <img src="https://images.unsplash.com/photo-1608029132360-cb90397dc9a8?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="img-fluid">
+            </div>
+        </div>
     </div>
+        
    
-    <div>
-        <strong>Body:</strong>
-        <p>{{ post?.body }}</p>
-    </div>
-   
+</div>
 </div>
